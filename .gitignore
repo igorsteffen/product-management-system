@@ -5,6 +5,7 @@
 
 # dotenv files
 .env
+.gitignore
 
 # User-specific files
 *.rsuser
