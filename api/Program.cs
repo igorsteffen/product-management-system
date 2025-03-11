@@ -28,8 +28,8 @@ app.MapGet("/", () =>
 
 app.MapGet("/{price}/{tax}", (double price, double tax) =>
 {
-    var final = price + (price * tax);
-    return new {price, tax, final};
+    var final = Math.Round(price + (price * tax),2);
+    return new { price = Math.Round(price, 2), tax = Math.Round(tax, 2), final };
 })
 .WithName("GetTax");
 
